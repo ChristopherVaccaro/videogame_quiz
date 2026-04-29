@@ -1,0 +1,42 @@
+:root {
+  --bg: #090a1a;
+  --panel: #161933;
+  --line: #34386e;
+  --cyan: #00f8bd;
+  --pink: #ff58d0;
+  --violet: #a085ff;
+  --yellow: #ffd54f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #e8ebff;
+  background: radial-gradient(circle at 15% 20%, #231145 0%, #090a1a 35%, #03121d 100%);
+  font-family: 'VT323', monospace;
+  min-height: 100vh;
+}
+.app { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+h1, h2, h3 { font-family: 'Press Start 2P', cursive; letter-spacing: 1px; }
+h1 { color: var(--cyan); text-shadow: 3px 3px 0 #5a1e73; font-size: 2rem; }
+button { font: inherit; border: 2px solid var(--line); background: #0f1230; color: var(--cyan); padding: .7rem .9rem; cursor: pointer; }
+.panel { border: 2px solid var(--line); padding: 1rem; background: rgba(16, 19, 44, .95); box-shadow: inset 0 0 0 2px rgba(92, 96, 140, .15); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; margin-bottom: 1rem; }
+.stats div { background: #090b20; padding: .8rem; }
+.stats span { color: #8b92ca; font-size: .9rem; }
+.stats strong { display: block; color: var(--cyan); font-size: 1.8rem; margin-top: .2rem; }
+.mode-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.mode h3 { color: var(--pink); }
+.mode p { font-size: 1.7rem; line-height: 1.25; }
+.mode.active { border-color: var(--cyan); }
+.start { margin-top: 1rem; color: var(--yellow); }
+.quiz h2 { color: var(--cyan); font-size: 1.1rem; line-height: 1.4; }
+.answers { display: grid; gap: .7rem; margin-top: .8rem; }
+.answers button { text-align: left; font-size: 1.5rem; color: #dae0ff; }
+.answers .correct { border-color: #17ff81; color: #17ff81; }
+.answers .wrong { border-color: #ff6a8a; color: #ff6a8a; }
+.trivia { margin-top: 1rem; padding-top: .8rem; border-top: 1px solid #3f437c; font-size: 1.5rem; color: var(--violet); }
+@media (max-width: 900px) {
+  .mode-grid, .stats { grid-template-columns: 1fr; }
+  h1 { font-size: 1.4rem; }
+}
